@@ -7,7 +7,7 @@ Studente: <b>Daniele Vallorani</b> | Matricola: <b>099581</b><br><br>
 
 # 🔍 Tecnologie utlizzate
 <b>• Ambiente di sviluppo: <a href="https://nodejs.org/it/">Node.js</a><br>
-• Linguaggio di programmazione: <a href="https://it.wikipedia.org/wiki/JavaScript">Javascript</a><br>
+• Linguaggio di programmazione: <a href="https://it.wikipedia.org/wiki/JavaScript">JavaScript</a><br>
 • Framework Web: <a href="https://expressjs.com/it/">Express.js</a><br>
 • Template Engine: <a href="https://handlebarsjs.com">Handlebars (.hbs)</a><br>
 • Gestione Layout: <a href="https://it.wikipedia.org/wiki/CSS">CSS</a><br> 
