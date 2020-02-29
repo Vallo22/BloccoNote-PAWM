@@ -1,0 +1,55 @@
+<!-- NAVBAR -->
+<nav id="thenav" class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+
+    <!-- NOME E LOGO -->
+    <a class="navbar-brand" href="/"><img src="/img/logo350x350.png" class="rounded-circle" width="30" height="30" class="d-inline-block align-top" alt="">
+    Blocco Note
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <!-- HOME -->
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- CONTATTI -->
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contatti</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+
+        <!-- UTENTE REGISTRATO -->
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          
+            Il mio Profilo
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/notes">I miei Appunti</a>
+            <a class="dropdown-item" href="/notes/add">Aggiungi un Appunto</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/users/logout">Esci</a>
+          </div>
+        </li>
+
+        <!-- UTENTE NON REGISTRATO -->
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/users/signin">Accedi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/signup">Registrati</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+    
+  </div>
+</nav>
+

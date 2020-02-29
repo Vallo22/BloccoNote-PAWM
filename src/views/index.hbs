@@ -1,0 +1,19 @@
+<!-- SCHERMATA PRINCIPALE -->
+<div class="jumbotron">
+  <h1 class="display-4 text-center">Benvenuto nell'applicazione Blocco Note</h1>
+  <p class="lead text-center">Con questa applicazione hai la possibilità di scrivere e salvare i tuoi appunti.</p>
+  <img class="rounded-circle mx-auto d-block m-4" src="/img/logo350x350.png" weight="200" height="200" alt="LogoSmall">
+  <hr class="my-4">
+
+  <!-- UTENTE REGISTRATO -->
+  {{#if user}}
+  <p class = "lead">Ciao {{user.name}}, consulta i tuoi <a href="/notes">appunti</a>!</p>
+
+  <!-- UTENTE NON REGISTRATO -->
+  {{else}}
+  <p class = "lead">Per consultare i tuoi appunti accedi al tuo account, altrimenti registrati.</p>
+  <a class="btn btn-primary btn-lg" href="/users/signin" role="button">Accedi</a>
+  <a class="btn btn-primary btn-lg" href="/users/signup" role="button">Registrati</a>
+  {{/if}}
+
+</div>

@@ -1,0 +1,26 @@
+<!-- NUOVO APPUNTO -->
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-header"><h3>Nuovo Appunto</h3></div>
+      <form action="/notes/new-note" method="POST">
+
+      <!-- TITOLO -->
+      <div class="form-group">
+        <input type="text" name="title" class="form-control" placeholder="Titolo">
+      </div>   
+
+      <!-- DESCRIZIONE -->
+      <div class="form-group">
+        <textarea name="description" class="form-control" placeholder="Descrizione"></textarea>
+      </div>
+
+      <!-- SALVA -->
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">Salva</button>
+      </div>
+      
+      </form>
+    </div>
+  </div>
+</div>

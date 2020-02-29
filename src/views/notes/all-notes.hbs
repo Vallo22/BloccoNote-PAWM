@@ -1,0 +1,42 @@
+<!-- TUTTI GLI APPUNTI -->
+<div class="row">
+  {{#each notes}}
+
+  <!-- APPUNTO -->
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-header"> {{ title }} </h4>
+        <p class="card-text">{{ description }} </p>
+
+        <!-- VISUALIZZA -->
+        <form action="/notes/view-note/{{_id}}">
+          <button type="submit" class="btn btn-primary btn-block btn-sm my-1">Visualizza</button>
+        </form>
+
+        <!-- MODIFICA -->
+        <form action="/notes/edit/{{_id}}">
+          <button type="submit" class="btn btn-warning btn-block btn-sm my-1">Modifica</button>
+        </form>
+
+        <!-- CANCELLA -->
+        <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm my-1">Cancella</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{else}}
+
+  <!-- IN CASO DI NESSUN APPUNTO -->
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h1 class="text-center">Ciao {{user.name}}!</h1>
+      <p class="lead">Non sono ancora presenti Appunti.</p>
+      <a href="/notes/add" class="btn btn-primary btn-block">Creane uno!</a>
+    </div>
+  </div>
+  
+  {{/each}}
+</div>

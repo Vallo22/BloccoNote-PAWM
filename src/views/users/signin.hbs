@@ -1,0 +1,22 @@
+<!-- ACCESSO UTENTE -->
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card mt-4">
+      <div class="card-body">
+      <div class="card-header"><h4>Accedi al tuo account</h4></div>
+      <img class="rounded-circle mx-auto d-block logo m-4" src="/img/logo.png" alt="Logo">
+        <form action="/users/signin" method="POST">
+          <!-- EMAIL -->
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email">
+          </div>
+          <!-- PASSWORD -->
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+          <button class="btn btn-primary btn-block">Accedi</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
