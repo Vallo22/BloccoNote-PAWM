@@ -41,6 +41,10 @@ notesCtrl.renderNotes = async (req, res) => {
 // Visualizza appunto
 notesCtrl.renderViewNote = async(req, res) => {
   const note = await Note.findById(req.params.id);
+  if (note.user != req.user.id) {
+    req.flash("error_msg", "Autorizzazione negata");
+    return res.redirect("/notes");
+  }
   res.render("notes/view-note", { note });
 }
 
